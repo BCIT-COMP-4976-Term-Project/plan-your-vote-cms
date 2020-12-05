@@ -36,10 +36,16 @@
                     @Html.DisplayFor(_ => userRoleViewModel.IdentityRole.Name)
                 </td>
                 <td>
-                    @if (userRoleViewModel.IdentityUser.UserName != Constants.Account.ADMIN_USERNAME)
-                    {
-                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@userRoleViewModel.IdentityUser.UserName">@Localizer["Edit"]</a>
-                    }
+                    @*@if (userRoleViewModel.IdentityUser.UserName != Constants.Account.ADMIN_USERNAME)*@
+                
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@userRoleViewModel.IdentityUser.UserName">@Localizer["Edit"]</a>
+                    
+                </td>
+                <td>
+                    @*@if (userRoleViewModel.IdentityUser.UserName != Constants.Account.ADMIN_USERNAME)*@
+                
+                    <a class="btn btn-primary" asp-action="Password" asp-route-id="@userRoleViewModel.IdentityUser.UserName">@Localizer["Password"]</a>
+                    
                 </td>
                 <td>
                     @if (userRoleViewModel.IdentityUser.UserName != Constants.Account.ADMIN_USERNAME)
