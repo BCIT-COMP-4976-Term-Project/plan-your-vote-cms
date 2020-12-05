@@ -12,5 +12,6 @@
 
         // test push
         public const string DEFAULT_PASSWORD = "ChangeDefaultPassword";
+        //public const string DEFAULT_PASSWORD = _configuration["Password"];
     }
 }

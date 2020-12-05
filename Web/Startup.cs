@@ -37,7 +37,7 @@ namespace Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {   
             services.AddCors(options =>
             {
                 options.AddPolicy("EmailPolicy",
@@ -48,6 +48,10 @@ namespace Web
                         .AllowAnyHeader()
                 );
             });
+
+            // Retrieves secret entered in command line and saves it
+            var adminPassword = _configuration["Password"];
+            Console.WriteLine(adminPassword);
 
             services.Configure<CookiePolicyOptions>(options =>
             {
